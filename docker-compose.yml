@@ -4,7 +4,7 @@ services:
   namenode:
     image: strongpapazola/hadoop-namenode:3.3.4-java8
     container_name: namenode
-    hostname: master
+    hostname: bigdata.bisa.ai
     restart: always
     ports:
       - 9870:9870
@@ -19,7 +19,7 @@ services:
   datanode1:
     image: strongpapazola/hadoop-datanode:3.3.4-java8
     container_name: datanode1
-    hostname: bisa.ai
+    hostname: bigdata.bisa.ai
     restart: always
     ports:
       - 9864:9864
@@ -28,7 +28,7 @@ services:
     volumes:
       - hadoop_datanode1:/hadoop/dfs/data
     environment:
-      SERVICE_PRECONDITION: "103.41.206.252:9870"
+      SERVICE_PRECONDITION: "117.53.45.158:9870"
     env_file:
       - ./hadoop.env
     command: "/run.sh"
@@ -42,7 +42,7 @@ services:
 #     volumes:
 #       - hadoop_datanode2:/hadoop/dfs/data
 #     environment:
-#       SERVICE_PRECONDITION: "103.41.206.252:9870"
+#       SERVICE_PRECONDITION: "117.53.45.158:9870"
 #     env_file:
 #       - ./hadoop.env
   
@@ -53,7 +53,7 @@ services:
     ports:
       - 8088:8088
     environment:
-      SERVICE_PRECONDITION: "103.41.206.252:9000 103.41.206.252:9870 103.41.206.252:9864"
+      SERVICE_PRECONDITION: "117.53.45.158:9000 117.53.45.158:9870 117.53.45.158:9864"
     env_file:
       - ./hadoop.env
 
@@ -64,7 +64,7 @@ services:
     ports:
       - 8042:8042
     environment:
-      SERVICE_PRECONDITION: "103.41.206.252:9000 103.41.206.252:9870 103.41.206.252:9864 103.41.206.252:8088"
+      SERVICE_PRECONDITION: "117.53.45.158:9000 117.53.45.158:9870 117.53.45.158:9864 117.53.45.158:8088"
     env_file:
       - ./hadoop.env
   
@@ -76,7 +76,7 @@ services:
       - 8188:8188
       - 10200:10200
     environment:
-      SERVICE_PRECONDITION: "103.41.206.252:9000 103.41.206.252:9870 103.41.206.252:9864 103.41.206.252:8088"
+      SERVICE_PRECONDITION: "117.53.45.158:9000 117.53.45.158:9870 117.53.45.158:9864 117.53.45.158:8088"
       # SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
     volumes:
       - hadoop_historyserver:/hadoop/yarn/timeline
