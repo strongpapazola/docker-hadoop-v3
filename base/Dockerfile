@@ -19,9 +19,12 @@ RUN curl -O https://dist.apache.org/repos/dist/release/hadoop/common/KEYS
 
 RUN gpg --import KEYS
 
-ENV HADOOP_VERSION 3.3.4
-# ENV HADOOP_URL https://www.apache.org/dist/hadoop/common/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION.tar.gz
-ENV HADOOP_URL https://dlcdn.apache.org/hadoop/common/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION.tar.gz
+# ENV HADOOP_VERSION 2.10.2
+ENV HADOOP_VERSION 3.2.1
+# ENV HADOOP_VERSION 3.3.4
+# ENV HADOOP_VERSION 3.0.3
+# ENV HADOOP_URL https://dlcdn.apache.org/hadoop/common/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION.tar.gz
+ENV HADOOP_URL https://archive.apache.org/dist/hadoop/core/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION.tar.gz
 
 # # ENV HADOOP_URL https://dlcdn.apache.org/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.tar.gz
 # # ENV HADOOP_URL https://dlcdn.apache.org/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.tar.gz.asc
@@ -34,6 +37,10 @@ RUN set -x \
     && rm /tmp/hadoop.tar.gz*
 
 RUN ln -s /opt/hadoop-$HADOOP_VERSION/etc/hadoop /etc/hadoop
+
+# Hadoop 2.10.2
+# RUN mv /etc/hadoop/mapred-site.xml.template /etc/hadoop/mapred-site.xml
+# RUN mv /etc/hadoop/mapred-queues.xml.template /etc/hadoop/mapred-queues.xml
 
 RUN mkdir /opt/hadoop-$HADOOP_VERSION/logs
 

@@ -2,6 +2,7 @@
 
 # Set some sensible defaults
 # export CORE_CONF_fs_defaultFS=${CORE_CONF_fs_defaultFS:-hdfs://`hostname -f`:8020}
+# export CORE_CONF_fs_defaultFS=${CORE_CONF_fs_defaultFS:-hdfs://117.53.45.158:9000}
 export CORE_CONF_fs_defaultFS=${CORE_CONF_fs_defaultFS:-hdfs://117.53.45.158:9000}
 
 function addProperty() {
@@ -49,6 +50,8 @@ if [ "$MULTIHOMED_NETWORK" = "1" ]; then
     addProperty /etc/hadoop/hdfs-site.xml dfs.namenode.https-bind-host 0.0.0.0
     addProperty /etc/hadoop/hdfs-site.xml dfs.client.use.datanode.hostname true
     addProperty /etc/hadoop/hdfs-site.xml dfs.datanode.use.datanode.hostname true
+
+    # addProperty /etc/hadoop/hdfs-site.xml dfs.replication 1
     
     # YARN
     addProperty /etc/hadoop/yarn-site.xml yarn.resourcemanager.bind-host 0.0.0.0
@@ -57,6 +60,12 @@ if [ "$MULTIHOMED_NETWORK" = "1" ]; then
 
     # MAPRED
     addProperty /etc/hadoop/mapred-site.xml yarn.nodemanager.bind-host 0.0.0.0
+
+    # DEBUG
+    # addProperty /etc/hadoop/mapred-site.xml mapreduce.framework.name yarn
+    # addProperty /etc/hadoop/mapred-site.xml mapreduce.admin.user.env HADOOP_MAPRED_HOME=/opt/hadoop-3.2.1/share/hadoop/mapreduce/
+    # addProperty /etc/hadoop/mapred-site.xml yarn.app.mapreduce.am.env HADOOP_MAPRED_HOME=/opt/hadoop-3.2.1/share/hadoop/mapreduce/
+    # addProperty /etc/hadoop/yarn-site.xml yarn.nodemanager.aux-services mapreduce_shuffle
 
     # CORE Site (optional)
     # addProperty /etc/hadoop/core-site.xml hadoop.http.authentication.type simple

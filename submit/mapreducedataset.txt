@@ -1,0 +1,1155 @@
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+
+Bab 1 Pendahuluan ke Big Data dan Hadoop
+	Pengantar tentang Big Data dan kenapa itu penting
+Apa itu Big Data
+Big Data adalah istilah yang merujuk kepada kumpulan data yang sangat besar dan kompleks yang sulit atau bahkan tidak mungkin dikelola dengan menggunakan alat dan teknik tradisional Data ini dapat berupa teks angka gambar suara dan lebih banyak lagi Kunci dari Big Data adalah bahwa volume kecepatan dan keragaman data ini melebihi kapasitas alat perangkat keras dan perangkat lunak konvensional untuk mengelolanya
+Mengapa Big Data Penting
+1	Pengambilan Keputusan Berbasis Data Big Data memungkinkan perusahaan dan organisasi untuk membuat keputusan berdasarkan bukti dan data yang kuat daripada asumsi semata Hal ini dapat menghasilkan keputusan yang lebih baik dan strategi yang lebih efektif
+2	Inovasi Big Data memungkinkan organisasi untuk mengeksplorasi dan mengidentifikasi pola tren dan wawasan yang mungkin tidak terlihat dengan data yang lebih kecil Hal ini dapat memicu inovasi produk dan layanan
+3	Peningkatan Efisiensi Dengan menganalisis Big Data perusahaan dapat mengidentifikasi areaarea di mana mereka dapat meningkatkan efisiensi operasional mereka menghemat waktu dan sumber daya
+4	Personalisasi Data besar memungkinkan perusahaan untuk memberikan pengalaman yang lebih personal kepada pelanggan mereka misalnya melalui rekomendasi produk yang disesuaikan
+5	Mendeteksi Masalah dan Keamanan Big Data dapat digunakan untuk mendeteksi ancaman keamanan dan masalah potensial lebih cepat yang dapat membantu melindungi sistem dan data
+
+	Konsep dasar Hadoop dan ekosistemnya
+Apa itu Apache Hadoop
+Apache Hadoop adalah kerangka kerja opensource yang dirancang untuk menyimpan mengelola dan mengolah Big Data secara terdistribusi Ini terdiri dari komponen inti yang mencakup
+	Hadoop Distributed File System HDFS Sistem file terdistribusi yang dirancang untuk menyimpan data besar di berbagai node server
+	MapReduce Model pemrograman dan pemrosesan yang digunakan untuk menguraikan dan menganalisis data di seluruh cluster
+Ekosistem Hadoop
+Ekosistem Hadoop adalah kumpulan proyekproyek opensource yang dibangun di sekitar Hadoop untuk memperluas kemampuan dan fungsionalitasnya Beberapa komponen utama dalam ekosistem Hadoop meliputi
+	Hive Platform untuk melakukan query dan analisis data dengan menggunakan bahasa SQL
+	Pig Bahasa scripting yang digunakan untuk menggambarkan dan menjalankan tugas pemrosesan data di dalam ekosistem Hadoop
+	HBase Basis data NoSQL yang dirancang untuk menyimpan data yang sangat besar dengan tingkat skalabilitas tinggi
+	Spark Kerangka kerja pemrosesan data cepat yang berjalan di atas Hadoop dan menyediakan API yang lebih tinggi daripada MapReduce
+	YARN Manajer sumber daya cluster yang digunakan untuk mengelola dan mengalokasikan sumber daya cluster untuk berbagai aplikasi
+
+	Instalasi dan konfigurasi Hadoop pada lingkungan lokal
+Bab 2 HDFS Hadoop Distributed File System
+Pengenalan HDFS dan cara kerjanya
+Perintahperintah dasar HDFS
+Pengelolaan data di HDFS
+Bab 3 MapReduce
+Konsep dasar pemrograman MapReduce
+Membuat dan menjalankan pekerjaan MapReduce
+Contoh aplikasi MapReduce
+Bab 4 Ekosistem Hadoop
+Pengenalan ekosistem Hadoop seperti Hive Pig HBase dan Spark
+Bagaimana menggunakan alatalat ini untuk analisis data dan pemrosesan
+Bab 5 YARN Yet Another Resource Negotiator
+Memahami manajemen sumber daya dengan YARN
+Menjalankan aplikasi nonMapReduce di atas YARN
+Bab 6 Integrasi dengan SQL
+Pengantar SQLonHadoop menggunakan alat seperti Hive dan Impala
+Eksekusi kueri SQL di atas data Hadoop
+Bab 7 Keamanan dan Manajemen
+Masalah keamanan di lingkungan Hadoop
+Pengelolaan dan pemantauan klaster Hadoop
+Bab 8 Kasus Penggunaan dan Studi Kasus
+Studi kasus nyata tentang penggunaan Hadoop dalam berbagai industri
+Penilaian tugas akhir kursus
+Bab 9 Proyek Akhir
+Mengembangkan proyek akhir menggunakan Hadoop
+Presentasi proyek kepada kelas
+Bab 10 Kesimpulan dan Evaluasi
+Kesimpulan kursus
+Evaluasi oleh peserta
+

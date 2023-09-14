@@ -9,6 +9,7 @@ ENV CLASS_TO_RUN="WordCount"
 ENV PARAMS="/input /output"
 
 ADD run.sh /run.sh
+ADD mapreducedataset.txt /mapreducedataset.txt
 RUN chmod a+x /run.sh
 
 CMD ["/run.sh"]

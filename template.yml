@@ -4,7 +4,6 @@ services:
   namenode:
     image: strongpapazola/hadoop-namenode:3.3.4-java8
     container_name: namenode
-    hostname: data.bisa.ai
     restart: always
     ports:
       - 9870:9870
@@ -15,23 +14,27 @@ services:
       - CLUSTER_NAME=test
     env_file:
       - ./hadoop.env
+    networks:
+      - development
 
-  datanode1:
+  datanode:
     image: strongpapazola/hadoop-datanode:3.3.4-java8
-    container_name: datanode1
+    container_name: datanode
     hostname: data.bisa.ai
     restart: always
     ports:
       - 9864:9864 
       - 9866:9866
       - 9867:9867
+
     volumes:
-      - hadoop_datanode1:/hadoop/dfs/data
+      - hadoop_datanode:/hadoop/dfs/data
     environment:
-      SERVICE_PRECONDITION: "117.53.45.158:9870"
+      SERVICE_PRECONDITION: "namenode:9870"
     env_file:
       - ./hadoop.env
-    command: "/run.sh"
+    networks:
+      - development
   
   resourcemanager:
     image: strongpapazola/hadoop-resourcemanager:3.3.4-java8
@@ -39,11 +42,12 @@ services:
     restart: always
     ports:
       - 8088:8088
-      - 8031:8031
     environment:
-      SERVICE_PRECONDITION: "117.53.45.158:9000 117.53.45.158:9870 117.53.45.158:9864"
+      SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864"
     env_file:
       - ./hadoop.env
+    networks:
+      - development
 
   nodemanager1:
     image: strongpapazola/hadoop-nodemanager:3.3.4-java8
@@ -52,9 +56,11 @@ services:
     ports:
       - 8042:8042
     environment:
-      SERVICE_PRECONDITION: "117.53.45.158:9000 117.53.45.158:9870 117.53.45.158:9864 117.53.45.158:8088"
+      SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
     env_file:
       - ./hadoop.env
+    networks:
+      - development
   
   historyserver:
     image: strongpapazola/hadoop-historyserver:3.3.4-java8
@@ -64,32 +70,20 @@ services:
       - 8188:8188
       - 10200:10200
     environment:
-      SERVICE_PRECONDITION: "117.53.45.158:9000 117.53.45.158:9870 117.53.45.158:9864 117.53.45.158:8088"
-      # SERVICE_PRECONDITION: "namenode:9000 namenode:9864 datanode:9864  resourcemanager:8088"
+      SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
     volumes:
       - hadoop_historyserver:/hadoop/yarn/timeline
     env_file:
       - ./hadoop.env
+    networks:
+      - development
   
 volumes:
   hadoop_namenode:
-  hadoop_datanode1:
-  # hadoop_datanode2:
+  hadoop_datanode:
   hadoop_historyserver:
 
-
-
-# docker rm -f nodemanager
-# docker rm -f resourcemanager
-# docker rm -f namenode
-# docker rm -f datanode
-# docker rm -f datanode1
-# docker rm -f historyserver
-# docker volume rm docker-hadoop-v3_hadoop_namenode
-# docker volume rm docker-hadoop-v3_hadoop_datanode
-# docker volume rm docker-hadoop-v3_hadoop_datanode1
-# docker volume rm docker-hadoop-v3_hadoop_historyserver
-
-# docker volume rm docker-hadoop_hadoop_namenode
-# docker volume rm docker-hadoop_hadoop_datanode1
-# docker volume rm docker-hadoop_hadoop_historyserver
+networks:
+  development:
+    name: development
+    driver: bridge
