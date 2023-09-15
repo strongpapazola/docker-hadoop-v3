@@ -1,18 +1,20 @@
 version: "3"
 
 services:
-  historyserver:
+  submit:
     image: strongpapazola/hadoop-submit:3.3.4-java8
     container_name: submit
     hostname: submit
     # hostname: bigdata.bisa.ai
-    restart: always
+    # restart: always
     environment:
       SERVICE_PRECONDITION: "117.53.45.158:9000 117.53.45.158:9870 117.53.45.158:9864 117.53.45.158:8088"
     env_file:
       - ./hadoop.env
     networks:
       - development
+    # stdin_open: true 
+    # tty: true
   
 networks:
   development:

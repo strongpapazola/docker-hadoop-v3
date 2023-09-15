@@ -11,3 +11,5 @@ docker volume rm docker-hadoop-v3_hadoop_historyserver
 docker volume rm docker-hadoop_hadoop_namenode
 docker volume rm docker-hadoop_hadoop_datanode1
 docker volume rm docker-hadoop_hadoop_historyserver
+
+docker ps --all && docker volume ls

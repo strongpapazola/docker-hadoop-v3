@@ -1,0 +1,2 @@
+# docker run -it --rm --name sqoop --env-file ./hadoop.env --net development strongpapazola/hadoop-sqoop:3.3.4-java8 bash
+docker run -it --rm --name sqoop --net development strongpapazola/hadoop-sqoop:3.3.4-java8 bash

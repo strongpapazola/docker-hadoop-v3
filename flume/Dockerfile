@@ -18,7 +18,7 @@ ENV PATH /opt/flume:$PATH
 COPY data.log /
 COPY flume.conf /opt/flume/conf
 
-# bin/flume-ng agent --conf ./conf/ -f conf/flume.conf -n agent1 -Dflume.root.logger=DEBUG
+#CMD /opt/flume/bin/flume-ng agent --conf /opt/flume/conf/ -f /opt/flume/conf/flume.conf -n agent1 -Dflume.root.logger=DEBUG
 
 
 
