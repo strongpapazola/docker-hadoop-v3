@@ -1,6 +1,8 @@
 #!/bin/bash
+# BASE
 docker build -t strongpapazola/hadoop-base:3.3.4-java8 base/.
 
+# Hadoop Cluster
 docker build -t strongpapazola/hadoop-namenode:3.3.4-java8 namenode/.
 docker build -t strongpapazola/hadoop-datanode:3.3.4-java8 datanode/.
 
@@ -9,9 +11,11 @@ docker build -t strongpapazola/hadoop-nodemanager:3.3.4-java8 nodemanager/.
 
 docker build -t strongpapazola/hadoop-historyserver:3.3.4-java8 historyserver/.
 
+# Hadoop Submit MapReduce Job
 docker build -t strongpapazola/hadoop-submit:3.3.4-java8 submit/.
-# USINGCOMPOSEEE docker run -it --rm --name submit strongpapazola/hadoop-submit:3.3.4-java8 
+# How To Run Using docker-compose
 
+# Migrate Data From SQL To Hadoop (Deprecated!!)
 docker build -t strongpapazola/hadoop-sqoop:3.3.4-java8 sqoop/.
 # USINGCOMPOSEEE docker run -it --rm --name sqoop strongpapazola/hadoop-sqoop:3.3.4-java8 
 

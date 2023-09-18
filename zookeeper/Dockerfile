@@ -12,6 +12,20 @@ RUN set -x \
     && rm /tmp/zookeeper.tar.gz* \
     && mv /opt/apache-zookeeper-3.9.0-bin/ /opt/zookeeper
 
+ENV PATH /opt/zookeeper/bin/:$PATH
+
+RUN cp /opt/zookeeper/conf/zoo_sample.cfg /opt/zookeeper/conf/zoo.cfg
+RUN echo "bindAddr=0.0.0.0" >> /opt/zookeeper/conf/zoo.cfg
+# RUN echo "admin.serverPort=8080" >> /opt/zookeeper/conf/zoo.cfg
+RUN echo "admin.enableServer=false" >> /opt/zookeeper/conf/zoo.cfg
+
+EXPOSE 2181
+# EXPOSE 2181 8080 45235  
+
+# CMD ["zkServer.sh","start"]
+CMD ["zkServer.sh", "start-foreground"]
+
+
 # ENV FLUME_HOME /opt/flume
 # ENV PATH /opt/flume:$PATH
 

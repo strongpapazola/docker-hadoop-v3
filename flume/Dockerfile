@@ -19,6 +19,7 @@ COPY data.log /
 COPY flume.conf /opt/flume/conf
 
 #CMD /opt/flume/bin/flume-ng agent --conf /opt/flume/conf/ -f /opt/flume/conf/flume.conf -n agent1 -Dflume.root.logger=DEBUG
+# cmd bin/flume-ng agent --conf conf --conf-file /opt/flume/conf/flume.conf --name agent -Dflume.root.logger=INFO,console
 
 
 
