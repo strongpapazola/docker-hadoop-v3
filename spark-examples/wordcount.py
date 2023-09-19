@@ -16,10 +16,7 @@ if __name__ == "__main__":
         print("Usage: wordcount <file>", file=sys.stderr)
         sys.exit(-1)
 
-    spark = SparkSession\
-        .builder\
-        .appName("PythonWordCount")\
-        .getOrCreate()
+    spark = SparkSession.builder.appName("PythonWordCount").getOrCreate()
 
     # Read the input file and convert it into an RDD of lines
     lines = spark.read.text(sys.argv[1]).rdd.map(lambda r: r[0])
@@ -51,7 +48,7 @@ if __name__ == "__main__":
     output = rdd.coalesce(1)
 
     # Define the HDFS output path where you want to write the data
-    output_path = "hdfs://117.53.45.158:9000/testwrite"
+    output_path = "hdfs://117.53.45.158:9000/hasil_analisis_spark"
 
     # Use the saveAsTextFile method to write the data to HDFS
     output.saveAsTextFile(output_path)
