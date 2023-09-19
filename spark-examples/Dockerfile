@@ -15,5 +15,5 @@ ENV SPARK_MASTER_PORT 7077
 
 ENV PYSPARK_PYTHON python3
 # CMD ["/spark/bin/spark-submit","--master","spark://117.53.45.158:7077","/app/wordcount.py","/input/mapreducedataset.txt"]
-# CMD ["/spark/bin/spark-submit","--master","spark://117.53.45.158:7077","/app/upload.py"]
-CMD ["/spark/bin/spark-submit","--master","spark://117.53.45.158:7077","/app/spark-sample-notif.py"]
+CMD ["/spark/bin/spark-submit","--master","spark://117.53.45.158:7077","/app/upload.py"]
+# CMD ["/spark/bin/spark-submit","--master","spark://117.53.45.158:7077","/app/spark-sample-notif.py"]

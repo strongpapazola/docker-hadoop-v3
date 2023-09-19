@@ -12,21 +12,21 @@ from os import system
 #!apt-get install openjdk-8-jdk-headless -qq > /dev/null
 #!wget -q https://dlcdn.apache.org/spark/spark-3.4.1/spark-3.4.1-bin-hadoop3.tgz
 #!tar xf spark-3.4.1-bin-hadoop3.tgz
+#system("python3 -m pip install hdfs pandas matplotlib seaborn numpy")
 
-system("pip install -q findspark")
-#system("pip install hdfs pandas matplotlib seaborn numpy")
-system("pip install hdfs")
-system("pip install pandas")
-system("pip install matplotlib")
-system("pip install seaborn")
-system("pip install numpy")
+system("python3 -m pip install -q findspark")
+system("python3 -m pip install hdfs")
+system("python3 -m pip install matplotlib")
+system("python3 -m pip install seaborn")
+system("python3 -m pip install numpy")
+system("python3 -m pip install pandas")
 
 import findspark
 #os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
 #os.environ["SPARK_HOME"] = "/content/spark-3.4.1-bin-hadoop3"
 findspark.init()
 
-#!pip install hdfs
+#!python3 -m pip install hdfs
 import hdfs
 
 from hdfs import InsecureClient
@@ -71,7 +71,7 @@ for col, num in zip(df.toPandas().describe().columns, range(1,11)):
 plt.tight_layout()
 st.set_y(0.95)
 fig.subplots_adjust(top=0.85, hspace=0.4)
-plt.show()
+# plt.show()
 
 from pyspark.sql.functions import isnan, when, count, col
 
@@ -99,10 +99,10 @@ from pyspark.sql.functions import corr
 
 #sns.heatmap(corr_df);
 sns.heatmap(corr_df, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-plt.savefig("my_plot.png", dpi=300)  # "my_plot.png" is the file name
+plt.savefig("tes.png", dpi=300)  # "my_plot.png" is the file name
 
-local_file_path = 'my_plot.png'
-hdfs_destination_path = '/my_plot.png'  # Adjust the HDFS path as needed
+local_file_path = 'tes.png'
+hdfs_destination_path = '/tes.png'  # Adjust the HDFS path as needed
 
 # Upload the file to HDFS
 client.upload(hdfs_destination_path, local_file_path)
