@@ -1,5 +1,19 @@
 # Hadoop Ecosystem Inside Docker
 
+## Installasi Di Ubuntu 22.04
+<pre>
+sudo bash
+apt update
+apt install docker.io curl git -y
+VERSION=$(curl --silent https://api.github.com/repos/docker/compose/releases/latest | grep -Po '"tag_name": "\K.*\d')
+DESTINATION=/usr/bin/docker-compose
+curl -L https://github.com/docker/compose/releases/download/${VERSION}/docker-compose-$(uname -s)-$(uname -m) -o $DESTINATION
+chmod 755 $DESTINATION
+git clone https://github.com/strongpapazola/docker-hadoop-v3
+cd docker-hadoop-v3
+docker-compose up -d --force-recreate
+</pre>
+
 ## Penjelasan Folder
 - Folder Ini Merupakan Template Dasar Aplikasi Aplikasi Lainnya
 <pre>
