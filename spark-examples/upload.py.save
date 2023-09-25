@@ -1,0 +1,280 @@
+# -*- coding: utf-8 -*-
+
+"""#sklearn"""
+
+import os
+from os import system
+
+system("python3 -m pip install -q findspark")
+system("python3 -m pip install hdfs")
+system("python3 -m pip install matplotlib")
+system("python3 -m pip install seaborn")
+system("python3 -m pip install numpy")
+system("python3 -m pip install pandas")
+system("python3 -m pip install -U scikit-learn")
+
+findspark.init()
+
+import hdfs
+
+from hdfs import InsecureClient
+
+# Create an HDFS client
+client = InsecureClient('http://117.53.45.158:9870', user='root')
+
+# Specify the local file path and the HDFS destination path
+hdfs_destination_path = '/College_Data.csv'  # Adjust the HDFS path as needed
+local_file_path = 'College_Data.csv'
+
+# Upload the file to HDFS
+client.download(hdfs_destination_path, local_file_path)
+
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.appName("diabetes").getOrCreate()
+
+# for basic mathematics operation
+import numpy as np
+
+# for dataframe manipulations
+import pandas as pd
+
+# for Data Visualizations
+import matplotlib.pyplot as plt
+import seaborn as sns
+#plt.style.use('fivethirtyeight')
+
+# importing the dataset
+data = pd.read_csv("College_Data.csv")
+data.shape
+
+# check the head of the data
+data.head()
+
+# check the Correlation Heat Map of the Data
+plt.figure(figsize=(15,15))
+sns.heatmap(data.corr(), annot = True, cmap = 'copper')
+plt.title('Correlation Heatmap of the Data', fontsize = 15)
+plt.show()
+
+correlation_matrix = data.corr()
+top_corr = correlation_matrix.unstack().sort_values(ascending=False)
+
+# Menghilangkan nilai korelasi dengan diri sendiri (nilai 1)
+top_corr = top_corr[top_corr != 1]
+
+# Mengambil 5 nilai korelasi tertinggi
+top_corr = top_corr.head(5)
+
+print("5 Nilai Korelasi Tertinggi:")
+print(top_corr)
+
+# describing the data
+data.describe()
+
+#check some information from the data
+data.info()
+
+data['Grad.Rate'].dtype
+
+# describing the categorical data
+data.describe(include = 'object')
+
+# checking if there is any NULL data
+data.isnull().any().any()
+
+# check the distribution of Apps and Accept
+import warnings
+warnings.filterwarnings('ignore')
+
+plt.rcParams['figure.figsize'] = (18, 8)
+
+plt.subplot(1, 2, 1)
+sns.set(style = 'whitegrid')
+sns.distplot(data['Apps'])
+plt.title('Distribution of Apps', fontsize = 20)
+plt.xlabel('Range of Apps')
+plt.ylabel('Count')
+
+
+plt.subplot(1, 2, 2)
+sns.set(style = 'whitegrid')
+sns.distplot(data['Accept'], color = 'red')
+plt.title('Distribution of Accept', fontsize = 20)
+plt.xlabel('Range of Accept')
+plt.ylabel('Count')
+plt.show()
+
+# check the distribution of Top10perc and Top25perc
+import warnings
+warnings.filterwarnings('ignore')
+
+plt.rcParams['figure.figsize'] = (18, 8)
+
+plt.subplot(1, 2, 1)
+sns.set(style = 'whitegrid')
+sns.distplot(data['Top10perc'])
+plt.title('Distribution of Top10perc', fontsize = 20)
+plt.xlabel('Range of Top10perc')
+plt.ylabel('Count')
+
+
+plt.subplot(1, 2, 2)
+sns.set(style = 'whitegrid')
+sns.distplot(data['Top25perc'], color = 'red')
+plt.title('Distribution of Top25perc', fontsize = 20)
+plt.xlabel('Range of Top25perc')
+plt.ylabel('Count')
+plt.show()
+
+# check the sitribution of Grad.Rate
+plt.rcParams['figure.figsize'] = (20, 8)
+sns.distplot(data['Grad.Rate'], color = 'red')
+plt.title('Distribution of Grad.Rate', fontsize = 20)
+plt.show()
+
+# check the distribution of Personal Spending
+plt.rcParams['figure.figsize'] = (20, 8)
+sns.distplot(data['Personal'], color = 'black')
+plt.title('Distribution of Personal Spending', fontsize = 20)
+plt.show()
+
+# check the distribution of F.Undergrad and P.Undergrad
+import warnings
+warnings.filterwarnings('ignore')
+
+plt.rcParams['figure.figsize'] = (18, 8)
+
+plt.subplot(1, 2, 1)
+sns.set(style = 'whitegrid')
+sns.distplot(data['F.Undergrad'])
+plt.title('Distribution of F.Undergrad', fontsize = 20)
+plt.xlabel('Range of F.Undergrad')
+plt.ylabel('Count')
+
+
+plt.subplot(1, 2, 2)
+sns.set(style = 'whitegrid')
+sns.distplot(data['P.Undergrad'], color = 'red')
+plt.title('Distribution of P.Undergrad', fontsize = 20)
+plt.xlabel('Range of P.Undergrad')
+plt.ylabel('Count')
+plt.show()
+
+#import k-means & the warnings library so that we can avoid warnings
+import warnings
+warnings.filterwarnings('ignore')
+from sklearn.cluster import KMeans
+
+#Rename Unamed columns
+df = data.rename(columns={'Unnamed: 0': 'University'})
+
+#set University as index
+df = df.set_index("University")
+df.head()
+
+#define x
+x = df
+
+#check the shape of x
+print(x.shape)
+
+#check the data, which we are going to use for the clustering analysis
+x_data  = pd.DataFrame(x)
+x_data.head()
+
+from sklearn.cluster import KMeans
+
+wcss = []
+for i in range(1, 11):
+    km = KMeans(n_clusters = i, init = 'k-means++', max_iter = 300, n_init = 10, random_state = 0)
+    km.fit(x)
+    wcss.append(km.inertia_)
+
+plt.figure(figsize=(15,5))
+plt.plot(range(1, 11), wcss, marker='o')
+plt.title('The Elbow Method', fontsize = 20)
+plt.xlabel('No. of Clusters')
+plt.ylabel('wcss')
+plt.show()
+
+#transform x
+from sklearn.decomposition import PCA
+Model = PCA(n_components=2)
+x_new = Model.fit_transform(x)
+
+# K Means Clustering with 2 Clusters
+#plt.style.use('fivethirtyeight')
+
+km = KMeans(n_clusters = 2, init = 'k-means++', max_iter = 300, n_init = 10, random_state = 0)
+plt.scatter(x_new[y_means == 0, 0], x_new[y_means == 0, 1], s = 100, c = 'pink', label = 'general')
+plt.scatter(x_new[y_means == 1, 0], x_new[y_means == 1, 1], s = 100, c = 'yellow', label = 'miser')
+plt.scatter(km.cluster_centers_[:,0], km.cluster_centers_[:, 1], s = 50, c = 'blue' , label = 'centeroid')
+
+plt.style.use('fivethirtyeight')
+plt.title('K Means Clustering with 2 Clusters', fontsize = 20)
+plt.legend()
+plt.grid()
+plt.show()
+
+#K Means Clustering with 3 Clusters
+plt.style.use('fivethirtyeight')
+
+km = KMeans(n_clusters = 3, init = 'k-means++', max_iter = 300, n_init = 10, random_state = 0)
+y_means = km.fit_predict(x_new)
+
+plt.scatter(x_new[y_means == 0, 0], x_new[y_means == 0, 1], s = 100, c = 'pink', label = 'general')
+plt.scatter(x_new[y_means == 1, 0], x_new[y_means == 1, 1], s = 100, c = 'yellow', label = 'miser')
+plt.scatter(x_new[y_means == 2, 0], x_new[y_means == 2, 1], s = 100, c = 'cyan', label = 'target')
+plt.scatter(km.cluster_centers_[:,0], km.cluster_centers_[:, 1], s = 50, c = 'blue' , label = 'centeroid')
+
+plt.style.use('fivethirtyeight')
+plt.title('K Means Clustering with 3 Clusters', fontsize = 20)
+plt.legend()
+plt.grid()
+plt.show()
+
+#K Means Clustering with 4 Clusters
+plt.style.use('fivethirtyeight')
+
+km = KMeans(n_clusters = 4, init = 'k-means++', max_iter = 300, n_init = 10, random_state = 0)
+y_means = km.fit_predict(x_new)
+
+plt.scatter(x_new[y_means == 0, 0], x_new[y_means == 0, 1], s = 100, c = 'pink', label = 'general')
+plt.scatter(x_new[y_means == 1, 0], x_new[y_means == 1, 1], s = 100, c = 'yellow', label = 'miser')
+plt.scatter(x_new[y_means == 2, 0], x_new[y_means == 2, 1], s = 100, c = 'cyan', label = 'target')
+plt.scatter(x_new[y_means == 3, 0], x_new[y_means == 3, 1], s = 100, c = 'magenta', label = 'careful')
+plt.scatter(km.cluster_centers_[:,0], km.cluster_centers_[:, 1], s = 50, c = 'blue' , label = 'centeroid')
+
+plt.style.use('fivethirtyeight')
+plt.title('K Means Clustering with 4 Clusters', fontsize = 20)
+plt.legend()
+plt.grid()
+plt.show()
+
+#visualize data with 5 clusters
+plt.style.use('fivethirtyeight')
+
+km = KMeans(n_clusters = 5, init = 'k-means++', max_iter = 300, n_init = 10, random_state = 0)
+y_means = km.fit_predict(x_new)
+
+plt.scatter(x_new[y_means == 0, 0], x_new[y_means == 0, 1], s = 100, c = 'pink', label = 'general')
+plt.scatter(x_new[y_means == 1, 0], x_new[y_means == 1, 1], s = 100, c = 'yellow', label = 'miser')
+plt.scatter(x_new[y_means == 2, 0], x_new[y_means == 2, 1], s = 100, c = 'cyan', label = 'target')
+plt.scatter(x_new[y_means == 3, 0], x_new[y_means == 3, 1], s = 100, c = 'magenta', label = 'careful')
+plt.scatter(x_new[y_means == 4, 0], x_new[y_means == 4, 1], s = 100, c = 'orange', label = 'spendthrift')
+plt.scatter(km.cluster_centers_[:,0], km.cluster_centers_[:, 1], s = 50, c = 'blue' , label = 'centeroid')
+
+plt.style.use('fivethirtyeight')
+plt.title('K Means Clustering with 5 Clusters', fontsize = 20)
+plt.legend()
+plt.grid()
+plt.show()
+
+best = KMeans(n_clusters = 2)
+
+best.fit(x)
+
+best.cluster_centers_
+
+spark.stop()

@@ -13,10 +13,12 @@ RUN set -x \
     && mv /opt/apache-flume-1.9.0-bin/ /opt/flume
 
 ENV FLUME_HOME /opt/flume
-ENV PATH /opt/flume:$PATH
+ENV PATH /opt/flume/bin:$PATH
 
 COPY data.log /
 COPY flume.conf /opt/flume/conf
+
+# flume-ng agent --conf conf --conf-file /opt/flume/conf/flume.conf --name agent -Dflume.root.logger=INFO,console
 
 #CMD /opt/flume/bin/flume-ng agent --conf /opt/flume/conf/ -f /opt/flume/conf/flume.conf -n agent1 -Dflume.root.logger=DEBUG
 # cmd bin/flume-ng agent --conf conf --conf-file /opt/flume/conf/flume.conf --name agent -Dflume.root.logger=INFO,console
