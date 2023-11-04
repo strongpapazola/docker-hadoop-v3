@@ -28,8 +28,8 @@ ENV HADOOP_VERSION 3.2.1
 # ENV HADOOP_VERSION 3.0.3
 # ENV HADOOP_URL https://dlcdn.apache.org/hadoop/common/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION.tar.gz
 
-# ENV HADOOP_URL https://archive.apache.org/dist/hadoop/core/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION.tar.gz
-ENV HADOOP_URL http://bigdata.bisa.ai/hadoop-$HADOOP_VERSION.tar.gz
+ENV HADOOP_URL https://archive.apache.org/dist/hadoop/core/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION.tar.gz
+#ENV HADOOP_URL http://bigdata.bisa.ai/hadoop-$HADOOP_VERSION.tar.gz
 
 # # ENV HADOOP_URL https://dlcdn.apache.org/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.tar.gz
 # # ENV HADOOP_URL https://dlcdn.apache.org/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.tar.gz.asc
@@ -66,7 +66,7 @@ ENV ENABLE_INIT_DAEMON false
 ENV INIT_DAEMON_BASE_URI http://identifier/init-daemon
 ENV INIT_DAEMON_STEP spark_master_init
 
-ENV BASE_URL=https://archive.apache.org/dist/spark/
+ENV BASE_URL=https://archive.apache.org/dist/spark
 ENV SPARK_VERSION=3.3.0
 ENV HADOOP_VERSION=3
 
@@ -74,7 +74,8 @@ COPY wait-for-step.sh /
 COPY execute-step.sh /
 COPY finish-step.sh /
 
-RUN  wget http://bigdata.bisa.ai/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
+#RUN  wget http://bigdata.bisa.ai/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
+RUN wget https://archive.apache.org/dist/spark/spark-3.3.0/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
       && tar -xvzf spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
       && mv spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION} spark \
       && rm spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
